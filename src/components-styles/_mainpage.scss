@@ -1,0 +1,72 @@
+.page{
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.navigation{
+   grid-row: 1/2;
+   grid-column: 1/-1; 
+   display:flex;
+}
+
+.content{
+   grid-row: 2/3;
+   grid-column: 1/-1;
+}
+
+
+.fade-enter {
+   opacity: 0;
+   transform: scale(1.5);
+   transform: translateY(5rem);;
+ }
+ 
+ .fade-enter-active {
+   opacity: 1;
+   transform: scale(1);
+   transition: opacity 400ms, transform 400ms;
+ }
+ 
+ .fade-exit {
+   opacity: 1;
+   transform: scale(1);
+ }
+ 
+ .fade-exit-active {
+   opacity: 0;
+   transform: scale(0.9);
+   transition: opacity 400ms, transform 400ms;
+ }
+
+.footer{
+   grid-row: 3/4;
+   grid-column: 1/-1;
+}
+
+
+//Key frames
+
+@keyframes moveInDown{
+   0%{
+       opacity: 0%;
+       transform: translateY(-10rem);
+   }
+   100%{
+       opacity:1;
+       transform: translateY(0px);
+   }
+}
+
+@keyframes moveInRight{
+   0%{
+       opacity: 0%;
+       transform: translateX(-20rem);
+   }
+   100%{
+       opacity:1;
+       transform: translateY(0px);
+   }
+}
+
+
+

@@ -1,0 +1,36 @@
+@import '/_base.scss';
+
+.nav{
+   width: 100%;
+   background: red;
+   height: 20vh;
+   
+   padding: 0 20rem;
+   &__wrapper{
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      
+      &__top{
+         display:flex;
+         justify-content: space-around;
+         margin-left: 60rem;
+         list-style-type: none;
+
+         & li{
+            margin-left: 6rem;
+         }
+      
+         a{
+            text-decoration:none;
+            color: $color-secondary;
+         }
+         &__item{
+            &-active{
+
+            }
+         }
+      }
+   }
+   
+}
