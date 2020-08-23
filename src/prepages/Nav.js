@@ -19,13 +19,14 @@ const navigation = navList.map(({name, exact, path})=>(
 const Nav = () => {
    return ( 
       <nav className="nav">
-         <div className="nav__wrapper"></div>
+         <div className="nav__wrapper">
          <div className="nav__wrapper__logo">
             <img src={Logo} alt="Logo"/>
          </div>
          <ul className="nav__wrapper__top">
             {navigation}
          </ul>
+         </div>
       </nav>
     );
 }

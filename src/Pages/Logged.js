@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import '../_logged.scss';
 
 const Logged = () => {
    return ( 
-      <div>
+      <div className="logged">
          Logged
       </div>
     );

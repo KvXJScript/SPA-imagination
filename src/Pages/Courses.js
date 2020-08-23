@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Nav from '../prepages/Nav';
+import '../components-styles/_courses.scss';
 
 
 const Courses = () => {
    return ( 
-      <div>
+      <div className="courses">
+         <Nav/>
          Courses
       </div>
     );

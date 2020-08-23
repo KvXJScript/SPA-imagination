@@ -1,8 +1,11 @@
 import React from 'react';
+import Nav from '../prepages/Nav';
+import '../components-styles/_error.scss'
 
 const ErrorPage = () => {
    return ( 
-      <div>
+      <div className="error">
+         <Nav/>
          Something didn't work :/
       </div>
     );

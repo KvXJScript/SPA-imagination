@@ -1,8 +1,11 @@
 import React from 'react'
+import Nav from '../prepages/Nav';
+import '../components-styles/_login.scss'
 
 const Login = () => {
    return ( 
-      <div>
+      <div className="login">
+         <Nav/>
          Login
       </div>
     );
