@@ -7,7 +7,6 @@ const navList = [
    {name: "HOME", path: "/", exact: true},
    {name: "OUR COURSES", path: "/courses"},
    {name: "YOUR IMAGINATION", path: "/your-imagination"},
-   {name: "LOGIN TO SEE MORE", path: "/login"}
 ]
 
 const navigation = navList.map(({name, exact, path})=>(
@@ -25,6 +24,8 @@ const Nav = () => {
          </div>
          <ul className="nav__wrapper__top">
             {navigation}
+            <button className="nav__wrapper__top--button"><NavLink to="/login">LOGIN TO SEE MORE</NavLink>
+            </button>
          </ul>
          </div>
       </nav>

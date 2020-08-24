@@ -1,0 +1,226 @@
+.homepage{
+   background-color: #dfdfdf;
+   display: grid;
+   grid-template-rows: 100vh 120vh 1fr 100vh;
+
+   &__top,
+   &__middle,
+   &__bottom,
+   &__verybottom{
+      display:grid;
+      grid-template-columns: repeat(14, 1fr);
+   }
+
+   &__top{
+      background-image: url('../img/photos/photos-phone/bgc-top.png');
+      grid-row: 1/2;
+      &__introduction{
+         grid-column: 3/13;
+         &__info{
+            margin-top: 30rem;
+            & h2{
+               font-size: 3rem;
+               letter-spacing: 20%;
+               font-weight: 100;
+               margin-bottom: 2rem;
+            }
+            & h1{
+               font-size: 6.5rem;
+               letter-spacing: 5px;
+               line-height: 130%;
+               font-weight: 300;
+               margin-left: 2rem;
+            }
+            & h1,
+            & h2,
+            & button{
+               color: #fff;
+            }
+
+            & button{
+               background-color: #0047FF;
+               border:none;
+               border-radius: 2rem;
+               font-size: 1.5rem;
+               letter-spacing: -0.1px;
+               padding: 1.5rem 2rem;
+               margin: 5rem 0 0 2rem;
+               font-weight: 400;
+               
+               
+            }
+         }
+      }
+   }
+
+   
+
+   &__middle{
+      grid-row: 2/2;
+      background-image: url('../img/photos/photos-phone/Ellipse.png');
+      background-repeat: no-repeat;
+
+      &__phones{
+         grid-column: 3/13;
+         display:grid;
+         grid-gap: 1rem;
+         grid-template-rows: repeat(14, 1fr);
+
+         &__primary,
+         &__secondary,
+         &__tertiary{
+            padding: 1.5rem 2.5rem;
+            width: 40rem;
+            background-repeat: no-repeat;
+            overflow: hidden;
+         }
+         &__primary{
+            grid-row: 3/-1;
+            background-image: url('../img/photos/photos-phone/phone-1.png');
+            
+            &_top{
+               width: 33rem;
+               &--info{
+                  display:flex;
+                  justify-content: space-between;
+                  & p{
+                     font-weight: bold;
+                  }
+               }
+               & h3{
+                  font-size: 3rem;
+                  text-align:center;
+               }
+            }
+            &_foryou,
+            &_latest{
+               & cite{
+                  font-size: 3rem;
+                  font-weight: bold;
+               }
+
+               &--info{
+                  margin-top: 8rem;
+                  color: #fff;
+
+                  & p{
+                     font-size: 1.2rem;
+                     letter-spacing: 1px;
+                     font-weight: 100;
+                     margin-bottom: 1rem;
+                  }
+                  & h4{
+                     font-weight: 600;
+                     font-size: 2rem;
+                     margin-bottom: .5rem;
+
+                  }
+                  & span{
+                     font-size: 1.2rem;
+                     margin-top: 1rem;
+                  }
+
+                  & span:not(:last-child){
+                     margin-right: 1rem;
+                  }
+
+                  & span:last-child{
+                     color: #7AEFFF;
+                  }
+
+                  & span svg{
+                     fill: #fff;
+                     height: 2rem;
+                     width: 2rem;
+                     padding-right: .3rem;
+                  }
+               }
+            }
+
+            &_latest{
+               margin-top: 8.5rem;
+            }
+         
+         }
+         &__secondary{
+            padding: 2rem 3rem;
+            grid-row: 2/13;
+            background-image: url('../img/photos/photos-phone/phone-2.png');
+
+            &__top{
+               color: #fff;
+
+               & h3{
+                  margin: 10rem 0 0 5rem;
+                  font-size: 3rem;
+                  font-weight: 400;
+               }
+               &--info{
+
+                  width: 34rem;
+                  display:flex;  
+                  justify-content: space-between;
+               }
+            }
+            
+         }
+         &__tertiary{
+            grid-row: 3/-1;
+            background-image: url('../img/photos/photos-phone/phone-3.png');
+         
+            &__top,
+            &__middle,
+            &__bottom{
+               width: 35rem;
+            }
+            &__top{
+               color: #fff;
+               &--info{
+                  display:flex;
+                  justify-content: space-between;
+               }
+               & h3{
+                  font-size: 2rem;
+                  margin: 6rem 0 0 2rem;
+               }
+            }
+            &__middle{
+               margin-top: 14rem;
+
+               & h3{
+                  font-size: 2.5rem;
+                  font-weight: bold;
+               }
+               & p{
+                  margin-left: 1rem;
+                  font-size: 1.8rem;
+               }
+            }
+            &__bottom{
+
+               & h2{
+                  text-align:center;
+                  font-size: 3rem;
+                  margin-top: 9rem;
+                  color: #fff;
+               }
+            }
+         
+         }
+      }
+   }
+
+   &__bottom{
+      grid-row: 3/4;
+      &__customers{
+
+      }
+   }
+
+   &__verybottom{
+      grid-row: 4/-1;
+      &__contact{
+
+      }
+   }  
+}

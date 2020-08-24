@@ -1,16 +1,20 @@
 .nav{
    max-width: 100vw;
-   background: red;
    height: 20vh;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   z-index: 1000;
    
-   padding: 5rem 10rem 0 10rem;
+   padding: 5rem 20rem 0 15rem;
 
    &__wrapper{
       display:flex;
-      justify-content:space-around;
-      align-items:center;
+      justify-content:space-around; 
       
-      
+      &__logo{
+         margin-bottom: 5rem;
+      }
       &__top{
          display:flex;
          justify-content: space-around;
@@ -19,12 +23,30 @@
 
          & li{
             margin-left: 6rem;
+            margin-top: 1rem;
+
+            & a{
+               text-decoration:none;
+               color: #fff;
+            }
          }
-      
-         a{
-            text-decoration:none;
-            color: #ffffff;
+
+         &--button{
+            letter-spacing: -.5px;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 10px;
+            padding: .5rem 2rem;
+            height: 5rem;
+            font-weight: bold;
+            margin: 0 0 2rem 6rem;
+
+            & a {
+               text-decoration:none;
+               color: #00239E;
+            }
          }
+
          &__item{
             &--active{
                border-bottom: 1px solid white;
