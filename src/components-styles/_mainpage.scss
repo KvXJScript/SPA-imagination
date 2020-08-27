@@ -39,8 +39,90 @@
  }
 
 .footer{
+   height: 50rem;
+   background-color: #000;
    grid-row: 3/4;
    grid-column: 1/-1;
+
+   & hr{
+      margin: 0 25rem;
+   }
+
+   &__top{
+      margin: 10rem 25rem 1rem 25rem;
+      display:flex;
+      justify-content: space-between;
+
+      & button{
+         background-color: transparent;
+         color: #fff;
+         border: none;
+         align-self: flex-end;
+         font-size: 1.5rem;
+         transition: .1s all ease-in-out;
+
+         &:hover{
+            color: #aaa;
+         }
+      }
+   }
+
+   &__bottom{
+      margin: 5rem 25rem 1rem 25rem;
+      display:flex;
+      justify-content: space-around;
+      
+      & h4{
+         color: #aaa;
+         font-weight: 300;
+         font-size: 2rem;
+         margin-bottom: 1rem;
+      }
+      
+
+      &__connect,
+      &__company{
+         & ul{
+            list-style-type: none;
+         }
+         & li:not(:last-child){
+            margin-bottom: .5rem;
+         }
+         & a{
+            text-decoration:none;
+            font-size: 2.5rem;
+            color: #fff;
+            margin-left: .5rem;
+            transition: .05s all ease-in;
+         }
+         & svg{
+            margin-right: 2rem;
+         }
+
+         & a:hover{
+            color: #aaa;
+         }
+      }
+
+      &__login{
+         align-self: center;
+
+         & button{
+            background-color: #00239E;
+            border: none;
+            outline:none;
+            padding: 2.5rem 4rem;
+            border-radius: 1rem;
+            font-size: 2.5rem;
+            transition: .2s all;
+
+            &:hover{
+               background-color: #00127A;
+            }
+         }
+      }
+      
+   }
 }
 
 
