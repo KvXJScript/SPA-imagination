@@ -10,13 +10,33 @@ import { ReactComponent as Person} from '../img/svg/person.svg'
 import { ReactComponent as Arrow} from '../img/svg/left-arrow.svg'
 import { ReactComponent as Like} from '../img/svg/like.svg'
 import { ReactComponent as LikeFull} from '../img/svg/like-full.svg'
+import { ReactComponent as Right} from '../img/svg/right.svg';
 import Customer1 from '../img/people/woman-2.png'
 import Customer2 from '../img/people/man.png'
 import Customer3 from '../img/people/woman-1.png'
+import FormPerson from '../img/photos/photos-opinions/form-photo.png'
 
 const Homepage = () => {
 
    const [flag, setFlag] = useState(true)
+   const [state, setState] = useState({
+      firstName: "",
+      email: "",
+      information: "",
+      course: ""
+   })
+
+   function handleForm (e){
+      const value = e.target.value;
+      setState({
+         ...state,
+         [e.target.value]: value
+      })
+   }
+
+   const handleSubmit = (e)=>{
+      e.preventDefault();
+   }
 
 
    const likeHandler = ()=>{
@@ -69,7 +89,7 @@ const Homepage = () => {
                      <cite>Our latest course</cite>
                      <div className="homepage__middle__phones__primary_latest--info">
                         <p><span>Thursday 21st 2023</span></p>
-                        <h4>Awesome thing around all of us</h4>
+                        <h4>Awesome things around all of us</h4>
                         <span><Hourglass/> 9 A.M. - 11 P.M.</span>
                         <span><Price/> 70$</span>
                         <span><Person/> Steve Brown</span>
@@ -185,7 +205,31 @@ const Homepage = () => {
          </div>
          <div className="homepage__verybottom">
             <div className="homepage__verybottom__contact">
-               Contact
+               <h1>Talk to us and get <span>your brain moving!</span></h1>
+               <div className="homepage__verybottom__contact__form">
+                  <div className="homepage__verybottom__contact__form--left">
+                     <p>This is exacly what will happen after you submit your form:</p>
+                     <img src={FormPerson} alt="person"/>
+                     <ul>
+                        <li><Right/> You will find your own path!</li>
+                        <li><Right/> We will respons as fast as it's possible!</li>
+                        <li><Right/> You will take a giant part in out project!</li>
+                     </ul>
+                  </div>
+                  <div className="homepage__verybottom__contact__form--right">
+                     <form onSubmit = {handleSubmit}>
+                        <textarea name="" id="" cols="20" rows="10" placeholder="Tell us about yourself" value = {state.information} onChange = {handleForm}></textarea>
+                        <select name="" id=""  value = {state.courses} onChange = {handleForm}>
+                           <option value="Test your mind with our mentors">Test your mind with our mentors</option>
+                           <option value="Awesome things around all of us">Awesome things around all of us</option>
+                           <option value="Challenge your brain">Challenge your brain</option>
+                        </select>
+                        <input type="text" placeholder="Your name" value = {state.firstName} onChange = {handleForm}/>
+                        <input type="email" placeholder="Your email" value = {state.email} onChange = {handleForm}/>
+                        <button type="submit">Let your adventure begins!</button>
+                     </form>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
