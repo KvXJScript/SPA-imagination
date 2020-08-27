@@ -1,7 +1,7 @@
 .homepage{
-   background-color: #dfdfdf;
+   background-color: #eeeeee;
    display: grid;
-   grid-template-rows: 100vh 120vh 1fr 100vh;
+   grid-template-rows: 100vh 125vh 1fr 100vh;
 
    &__top,
    &__middle,
@@ -57,7 +57,7 @@
 
    &__middle{
       grid-row: 2/2;
-      background-image: url('../img/photos/photos-phone/Ellipse.png');
+      background-image: url('../img/photos/photos-phone/Elipse.png');
       background-repeat: no-repeat;
 
       &__phones{
@@ -178,6 +178,10 @@
                &--info{
                   display:flex;
                   justify-content: space-between;
+
+                  & svg:nth-child(2){
+                     cursor: pointer;
+                  }
                }
                & h3{
                   font-size: 2rem;
@@ -211,9 +215,108 @@
    }
 
    &__bottom{
+      & img{
+         height: 15rem;
+         width: 15rem;
+         border: 1rem solid rgba(255, 255, 255, .2);
+         border-radius: 50%;
+      }
+
+      
+
       grid-row: 3/4;
       &__customers{
+         grid-column: 3/13;
+         display:grid;
+         grid-template-columns: repeat(4, 1fr);
+         
+         & h1{
+            text-align: center;
+            grid-column: 1/-1;
+            font-size: 7rem;
+            margin-bottom: 10rem;
+         }
 
+         &__primary, 
+         &__tertiary{
+            & img{
+               -webkit-box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.3);
+               -moz-box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.3);
+               box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.3);
+               margin-left: 3rem;
+            }
+         }
+
+         &__primary,
+         &__secondary,
+         &__tertiary{
+            background-color: #fff;
+            padding: 5rem 7rem;
+            border-radius: 2rem;
+            margin: 5rem 0;
+
+            & button{
+               outline: none;
+               background-color: #0047FF;
+               color: #fff;
+               padding: 1rem 3rem;
+               font-size: 1.5rem;
+               border: none;
+               border-radius: .5rem;
+            }
+
+            & button:not(:first-child){
+               margin-left: 3rem;
+            }
+
+            & article{
+               font-size: 2rem;
+               color: #8A8A8A;
+               letter-spacing: 2px;
+               margin-bottom:2rem;
+            }
+
+            & h3{
+               letter-spacing: 1px;
+            }
+
+            & span{
+               font-style: italic;
+               color: #878787;
+            }
+
+            &__bottom{
+               display:flex;
+               justify-content: space-between;
+               & p{
+                  justify-self: flex-end;
+                  align-self: flex-end;
+               }
+            }
+
+            &__top{
+               display:flex;
+            }
+         }
+
+         &__primary{
+            grid-column: 1/4;
+         }
+
+         &__secondary{
+            grid-column: 2/5;
+
+            &  img{
+               -webkit-box-shadow: -3px 1px 5px 0px rgba(0,0,0,0.3);
+               -moz-box-shadow: -3px 1px 5px 0px rgba(0,0,0,0.3);
+               box-shadow: -3px 1px 5px 0px rgba(0,0,0,0.3);
+               margin-right: 3rem;
+            }
+         }
+
+         &__tertiary{
+            grid-column: 1/4;
+         }
       }
    }
 

@@ -10,10 +10,27 @@ import { ReactComponent as Person} from '../img/svg/person.svg'
 import { ReactComponent as Arrow} from '../img/svg/left-arrow.svg'
 import { ReactComponent as Like} from '../img/svg/like.svg'
 import { ReactComponent as LikeFull} from '../img/svg/like-full.svg'
+import Customer1 from '../img/people/woman-2.png'
+import Customer2 from '../img/people/man.png'
+import Customer3 from '../img/people/woman-1.png'
 
 const Homepage = () => {
 
-   const {flag, setFlag} = useState(true)
+   const [flag, setFlag] = useState(true)
+
+
+   const likeHandler = ()=>{
+      if(flag){
+         return(
+            <Like onClick = {()=> setFlag(false)}/>
+         )
+      }
+      else{
+         return(
+             <LikeFull onClick = {()=> setFlag(true)}/>
+         )
+      }
+   }
 
    return ( 
       <section className="homepage">
@@ -72,8 +89,7 @@ const Homepage = () => {
                   <div className="homepage__middle__phones__tertiary__top">
                      <div className="homepage__middle__phones__tertiary__top--info">
                         <Arrow/>
-                        <Like onClick={()=>{(setFlag(false))}}/>
-                        {/* {flag? <Like/>: <LikeFull/>} */}
+                        {likeHandler()}
                      </div>
                      <h3>Check details of our main course</h3>
                   </div>
@@ -90,8 +106,81 @@ const Homepage = () => {
             </div>
          </main>
          <div className="homepage__bottom">
+            
             <div className="homepage__bottom__customers">
-               Customers
+            <h1>Many Happy Customers</h1>
+               <div className="homepage__bottom__customers__primary">
+                  <div className="homepage__bottom__customers__primary__top">
+                     <article>
+                        “My imagination went at another level. I trully didn’t know that
+                        my mind is possible to do such things! Every single coin was
+                        very worth it. I hope you - people reading this will make awesome
+                        decision in their life and they will take their imagination
+                        at another level which will help you with everyday problems”
+                     </article>
+                     <p><img src={Customer1} alt="customer-1"/></p>
+                  </div>
+                  <div className="homepage__bottom__customers__primary__bottom">
+                     <div>
+                        <h3>MARENNE FREEMAN</h3>
+                        <span>Young investor</span>
+                     </div>
+                     <p>
+                        <button>Awesome</button>
+                        <button>Modern</button>
+                        <button>Well organized</button>
+                     </p>
+                  </div>
+               </div>
+               <div className="homepage__bottom__customers__secondary">
+                  <div className="homepage__bottom__customers__secondary__top">
+                  <img src={Customer2} alt="customer-2"/>
+                     <article>
+                        “My everyday life changed A LOT. Me and a friend of mine - Paul
+                        Made a really fast decision on starting our own company.
+                        Thanks to your courses our minds were blowning away every
+                        problem we met. Thank you very much once again and I hope
+                        we will meet one more time. Also thanks to your awesome
+                        prices I didn’t need to spent all my savings to be open-minded”
+                     </article>
+                     
+                  </div>
+                  <div className="homepage__bottom__customers__secondary__bottom">
+                     <div>
+                        <h3>JACK DOUGHLASS</h3>
+                        <span>Web manager</span>
+                     </div>
+                     <p>
+                        <button>Cheap</button>
+                        <button>Deep</button>
+                        <button>Fancy</button>
+                     </p>
+                  </div>
+               </div>
+               <div className="homepage__bottom__customers__tertiary">
+                  <div className="homepage__bottom__customers__tertiary__top">
+                     <article>
+                        “I had very big problem with my mind... Sadly I had deep
+                        depression but thankfully I’ve found your website and 
+                        I joined to the best course in my life. It changed
+                        EVERYTHING. Thank you Stevard - thanks to you I can
+                        see this awesome world in new and better shapes
+                        Also i found this course kinda hard but it was “do able””
+                     </article>
+                     <img src={Customer3} alt="customer-3"/>
+                  </div>
+                  <div className="homepage__bottom__customers__tertiary__bottom">
+                     <div>
+                        <h3>JASMINE COATCH</h3>
+                        <span>Awesome wife</span>
+                     </div>
+                     <p>
+                        <button>Imposting</button>
+                        <button>Staggering</button>
+                        <button>"Hardish"</button>
+                     </p>
+                  </div>
+               </div>
             </div>
          </div>
          <div className="homepage__verybottom">
